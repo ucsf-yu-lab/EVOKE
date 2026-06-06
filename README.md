@@ -1,6 +1,7 @@
 # EVOKE: Evoked Orofacial Behavior Analysis
 ![EVOKE GUI](assets/evoke_logo.png)
 
+
 ## Overview
 A modular pipeline for processing orofacial pain behavioral data. This system automates the transfer, labeling, and metric extraction of mouse behavior videos across multiple research projects.
 
@@ -63,3 +64,10 @@ gui_launcher.py: Launches GUI that is the base for running analysis.
             ├── ...
             ├── Step8_Extraction.py
 ```
+
+## Contact
+This analysis was created by the Xiaobing Yu Lab at University of California, San Francisco
+
+Darian Mohsenin
+
+Email: darian.mohsenin@ucsf.edu GitHub: dmohsenin
