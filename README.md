@@ -1,4 +1,5 @@
 # EVOKE: Evoked Orofacial Behavior Analysis
+![EVOKE GUI](assets/evoke_logo.png)
 
 ## Overview
 A modular pipeline for processing orofacial pain behavioral data. This system automates the transfer, labeling, and metric extraction of mouse behavior videos across multiple research projects.
