@@ -1,0 +1,65 @@
+
+
+# Optional pipeline config. Leave python null to use current interpreter.
+python: null
+
+# DO NOT TOUCH; script mapping for GUI
+steps:
+  1: Step1_transfer.py
+  2: Step2_data_compiler.py
+  3: Step3_FrameCorrection.py
+  4: Step4_clip_trim.py
+  5: Step5_DLC_labelling.py
+  6: Step6_metrics.py
+  7: Step7_experiment_compiler.py
+  8: Step8_features.py
+
+# File transfer root path from external drive.
+source_root: "J:/Projects/orofacial_pain_project/data/orofacial_pain_setup/raw_files"
+
+# Project-specific paths. If present, these override the built-in defaults.
+projects:
+  1:
+    # Raw Data Paths
+    evoked_root: "I:/Projects/orofacial_project/data/evoked/raw_files"
+    spontaneous_root: "I:/Projects/orofacial_project/data/spontaneous/raw_files"
+    metadata_path: "I:/Projects/orofacial_project/data/OPexperiment_metadata.csv"
+
+    # Analysis Paths
+    evoked_processed_root: "I:/Projects/orofacial_project/data/evoked/processed_files"
+    evoked_analysis_root: "I:/Projects/orofacial_project/analysis/evoked/large_csv_files"
+    evoked_summary_root: "I:/Projects/orofacial_project/analysis/evoked/summary_csv_files"
+  2:
+    # Raw Data Paths
+    evoked_root: "I:/Projects/tmj_project/data/evoked/raw_files"
+    spontaneous_root: "I:/Projects/tmj_project/data/spontaneous/raw_files"
+    metadata_path: "I:/Projects/tmj_project/data/TMJexperiment_metadata.csv"
+
+    # Analysis Paths
+    evoked_processed_root: "I:/Projects/tmj_project/data/evoked/processed_files"
+    evoked_analysis_root: "I:/Projects/tmj_project/analysis/evoked/large_csv_files"
+    evoked_summary_root: "I:/Projects/tmj_project/analysis/evoked/summary_csv_files"
+
+
+# Paths to Tools used throughout analysis pipeline
+
+# FFmpeg used for clip trimming
+ffmpeg_path: "C:/Users/dmohsenin/Desktop/ffmpeg/bin/ffmpeg.exe"
+# FFmpeg trimming defaults
+trimming:
+  ffmpeg_path: "C:/Users/dmohsenin/Desktop/ffmpeg/bin/ffmpeg.exe"
+  before_seconds: 30.0
+  after_seconds: 30.0
+  default_fps: 70.0
+
+# DeepLabCut project path, uses model bundled with pipeline (RECOMMENDED)
+dlc_project_path: "./models/DLC_model_v2"
+dlc_config_file: "./models/DLC_model_v2/config.yaml"
+
+# DeepLabCut HARDCODED project path (NOT RECOMMENDED)
+#dlc_project_path: "C:/Users/dmohsenin/Desktop/DeepLabCut/FEBcam03-Darian-2025-02-24"
+# Optional explicit path to the DLC config.yaml (if not set, DLC project path + '/config.yaml' is used)
+#dlc_config_file: null
+
+# Path to the metrics calculation script called by step6 metrics calculations
+metrics_script_path: "J:/Darian/Code/February-2026_Code_Repo/Evoked_Behavior_Analysis/Step6.1_Metrics_Calculations.py"

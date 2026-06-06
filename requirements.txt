@@ -1,0 +1,15 @@
+# Evoked Behavior Analysis Pipeline Specific Requirements
+
+#Configuration
+PyYAML>=6.0
+
+# Data Manipulation & Math
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Computer Vision & Video Processing
+opencv-python
+tqdm
+
+# Deep Learning (Core Analysis Engine)
+# DEEPLABCUT 3.10.15 - Install conda environment via official documentation! Then install above dependencies into that environment.
