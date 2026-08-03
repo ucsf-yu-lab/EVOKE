@@ -1,7 +1,13 @@
 # Evoked Behavior Analysis Pipeline Specific Requirements
 
-#Configuration
+# Configuration
 PyYAML>=6.0
+
+# GUI image support
+Pillow>=10.0
+
+# Tkinter is part of standard Python on Windows and macOS and cannot be
+# installed reliably with pip. On Debian/Ubuntu Linux: sudo apt install python3-tk
 
 # Data Manipulation & Math
 pandas>=2.0.0
