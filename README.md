@@ -9,7 +9,7 @@ A modular pipeline for processing orofacial pain behavioral data. This system au
 
 ## Getting Started
 
-### Initialize Data root folder
+### Initialize Data Root Folder
 Open the GUI and select Project from the dropdown selection. On the same line to the right, press 'Initialize Data Root', select a location to create data folder. This folder will hold large video files so make sure the location can handle large files. The pipeling_config.YAML will automatically be populated with directory paths to data folders.
 
 ### Configure the Environment
