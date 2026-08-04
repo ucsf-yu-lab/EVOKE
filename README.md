@@ -8,8 +8,12 @@ A modular pipeline for processing orofacial pain behavioral data. This system au
 
 
 ## Getting Started
+
+### Initialize Data root folder
+Open the GUI and select Project from the dropdown selection. On the same line to the right, press 'Initialize Data Root', select a location to create data folder. This folder will hold large video files so make sure the location can handle large files. The pipeling_config.YAML will automatically be populated with directory paths to data folders.
+
 ### Configure the Environment
-Edit the pipeline_config.YAML to set user-specific project directory paths!
+Edit the pipeline_config.YAML to set user-specific files paths! If data root is initialized then the data folders should be set already.
 
 ### Launch the GUI (Recommended)
 The easiest way to run the pipeline is through the GUI. This handles background threading so the app doesn't freeze during long analysis runs. [python gui_launcher.py]
@@ -29,7 +33,7 @@ config.py: The internal reader that feeds the YAML settings into every step of t
 
 gui_launcher.py: Launches GUI that is the base for running analysis.
 
-## Recommended Project Directory Structure
+## Project Directory Structure
 ```
 │
 ├── [External Drive; Data collection drive] 
